@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+      <ion-menu-button></ion-menu-button> <!--Es la etiqueta para crear el-->
+    </ion-buttons>
+    <ion-title>inicio {{ comuna}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+    <!--ejemplo if-->
+  <p *ngIf="edad < 35"> {{comuna}} </p>
+  <!--fin ejemplo if-->
+
+  <!--ejemplo for-->
+  <ion-item *ngFor="let dato of arregloPersona ">
+  <ion-label ><b>Nombre: </b>{{ dato.nombre | uppercase }} </ion-label>
+  <ion-label ><b>Apellido: </b>{{ dato.apellido |lowercase }} </ion-label>
+  <ion-label ><b>Edad: </b>{{ dato.edad}} </ion-label>
+  </ion-item>
+  <!-- fin ejemplo for-->
+
+  <ion-item >
+    <ion-input label="Nombre Persona" labelPlacement="floating" placeholder="Ingrese su nombre" [(ngModel)]="nombre" > </ion-input>
+  </ion-item>
+
+  <ion-button color="success" [routerLink]="['/home']">Ir al Home</ion-button>
+  <ion-button color="warning" (click)="irPagina()">Ir a Agregar {{ nombre }}</ion-button>
+  <p>{{ datosP.dato }}</p>
+
+
+
+
+</ion-content>
+
+
+
+
+
+<!--ngmodel guarda datos en una variable
+*ngIf "nombre == "juan "  para comparar 
+
+
+
+
+-->
