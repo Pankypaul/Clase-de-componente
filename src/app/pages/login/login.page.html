@@ -1,11 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-      <ion-menu-button></ion-menu-button> <!--Es la etiqueta para crear el-->
-    </ion-buttons>
-    <ion-title>inicio {{ comuna}}</ion-title>
-  </ion-toolbar>
+  <app-componente1 titulo="Página de inicio 2024"[datos]="datosP"></app-componente1> <!--Debo modificar archivo modules para que lo detecte-->
 </ion-header>
 <ion-content [fullscreen]="true">
     <!--ejemplo if-->
@@ -20,8 +14,11 @@
   </ion-item>
   <!-- fin ejemplo for-->
 
+  <mat-spinner></mat-spinner> <!--Spinner de carga animación-->
+
+
   <ion-item >
-    <ion-input label="Nombre Persona" labelPlacement="floating" placeholder="Ingrese su nombre" [(ngModel)]="nombre" > </ion-input>
+    <ion-input label"Nombre Persona" labelPlacement="floating" placeholder="Ingrese su nombre" [(ngModel)]="nombre" > </ion-input>
   </ion-item>
 
   <ion-button color="success" [routerLink]="['/home']">Ir al Home</ion-button>

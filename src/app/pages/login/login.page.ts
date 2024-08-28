@@ -66,6 +66,7 @@ export class LoginPage implements OnInit {
     this.router.navigate(['/agregar'],navigationextras);
  /* fin ejemplo contexto*/
   }
+  
   // Alerta intrusiva (El usuario interatua con el)
   async presentAlert() {
     const alert = await this.alertController.create({
